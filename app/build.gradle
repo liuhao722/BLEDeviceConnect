@@ -8,15 +8,16 @@ greendao {
 }
 
 android {
-    compileSdkVersion 26
-    buildToolsVersion "26.0.1"
+    compileSdkVersion rootProject.ext.android["compileSdkVersion"]
+    buildToolsVersion rootProject.ext.android["buildToolsVersion"]
+
     defaultConfig {
-        applicationId "com.zmm.bledeviceconnect"
-        minSdkVersion 18
-        targetSdkVersion 26
-        versionCode 1
-        versionName "1.0"
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        applicationId rootProject.ext.android["applicationId"]
+        minSdkVersion rootProject.ext.android["minSdkVersion"]
+        targetSdkVersion rootProject.ext.android["targetSdkVersion"]
+        versionCode rootProject.ext.android["versionCode"]
+        versionName rootProject.ext.android["versionName"]
+        flavorDimensions rootProject.ext.android["flavorDimensions"]
     }
     buildTypes {
         release {
@@ -36,6 +37,6 @@ dependencies {
     testCompile 'junit:junit:4.12'
     compile 'com.jakewharton:butterknife:5.1.1'
     compile 'com.android.support:recyclerview-v7:26.0.0-alpha1'
-    compile 'org.greenrobot:greendao:3.2.0'
+    compile 'org.greenrobot:greendao:3.3.0'
 
 }
